@@ -1,6 +1,6 @@
 # Archiving Scripts for Media24 images
 
-This PHP script processes the images downloaded from WOodwing Enterprise by a Smart Mover job.
+This PHP script processes the images downloaded from Woodwing Enterprise by a Smart Mover job.
 
 1. All images are copied out of the folders.
 2. TIFF, PSD and BMP images are converted to JPEG, JPEG images are unchanged.
