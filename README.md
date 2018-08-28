@@ -7,7 +7,8 @@ This PHP script processes the images downloaded from Woodwing Enterprise by a Sm
 3. The colour space is not converted.
 4. Images containing copyright symbols in the "Rights/Restrictions" metadata field are not archived.
 5. Images with certain forbidden filenames (mostly filenames known to be used by syndication services) are not archived.
-6. The images are then stored in an output folder, in a structure based on year/issue date. This is to prevent too many images being stored in the same folder.
+6. Images below a certain size (specified in config.php) will not be archived.
+7. The images are then stored in an output folder, in a structure based on year/issue date. This is to prevent too many images being stored in the same folder.
 
 The script requires that PHP, ExifTool and ImageMagick all be already installed on the target machine.
 

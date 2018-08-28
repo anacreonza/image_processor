@@ -1,6 +1,8 @@
 <?php
 // Settings for Image conversion script.
 
+setlocale(LC_CTYPE, "en_US.UTF-8");
+
 // Path to ImageMagick convert executable for image format conversion
 
 if (PHP_OS === "WINNT"){
@@ -24,11 +26,21 @@ define("EXIFTOOL", $escaped_path_string);
 if (PHP_OS == "WINNT"){
     define("WK_DIR", "c:\SmartMover temp"); # No trailing slash
 } else {
-    define("WK_DIR", "/SmartMover temp"); # No trailing slash
+    define("WK_DIR", "/Users/stuart.kinnear/Desktop/SmartMover temp"); # No trailing slash
 }
 
 // Define minimum size (in bytes) of image file worth archiving
 define("MINSIZE", 100000); # 100000 bytes is 100kb.
 
-
+# Filenames to exclude
+$excluded_filenames = [
+    "dreamstime",
+    "shutterstock",
+    "istock",
+    "getty",
+    "corbis",
+    "caters_",
+    "magfeats",
+    "asiawire"
+];
 ?>
