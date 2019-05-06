@@ -30,17 +30,23 @@ if (PHP_OS == "WINNT"){
 }
 
 // Define minimum size (in bytes) of image file worth archiving
-define("MINSIZE", 100000); # 100000 bytes is 100kb.
+define("MINSIZE", 200000); # 100000 bytes is 100kb.
 
-# Filenames to exclude
-$excluded_filenames = [
+# Strings to exclude
+$excluded_names = [
     "dreamstime",
+    "-1024x1024",
     "shutterstock",
     "istock",
     "getty",
     "corbis",
     "caters_",
     "magfeats",
-    "asiawire"
+    "asiawire",
+    "All Rights Reserv",
+    "no-archive",
+    "Copyright",
+    "(c)",
+    "©"
 ];
 ?>
