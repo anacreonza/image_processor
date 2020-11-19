@@ -2,6 +2,15 @@
 
 require_once("config.php");
 #error_reporting(0); # Suppress warning messages.
+function check_requirements(){
+	if (! file_exists('/usr/local/bin/convert')){
+		return false;
+	}
+	if (! file_exists('/usr/local/bin/exiftool')){
+		return false;
+	}
+	return true;
+}
 
 function logwrite($details){
 	$date = new DateTime();
@@ -65,6 +74,10 @@ echo "#                                 #\n";
 echo "#  PHP Image Conversion Script.   #\n";
 echo "#                                 #\n";
 echo "###################################\n\n";
+
+if (!check_requirements()){
+	die("unable to verify exiftool or imagemagick convert. Are they installed?\r");
+}
 
 $brnd = $argv[1];
 $brnd = strtoupper($brnd);
@@ -191,7 +204,7 @@ function process_images($format, $selected_brand, $excluded_names){
 		logwrite("Stored $escaped_new_jpeg");
 		
 		# Conversion loop
-		if ( $newfile !== $new_jpeg){
+		if ( $newfile !== $new_jpeg ){
 			echo "Compressing file to JPEG...\n";
 			if (PHP_OS == "WINNT"){
 				$command_string = CONVERT . " convert -flatten -quiet " . $escaped_filename . " " . $escaped_new_jpeg;

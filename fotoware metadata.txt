@@ -1,0 +1,12 @@
+Fotoware Metadata Schema:
+	Originating Program: FotoWare FotoStation
+	By-line: SHARON SERETLO
+	By-line Title: Papparazzi_Socials_Drum
+	Caption-Abstract: SA SPORTS AWARDS
+	Creator Tool: FotoWare FotoStation
+	Authors Position: Papparazzi_Socials_Drum
+	User Defined 6: Drum
+	Creator: SHARON SERETLO
+	Description: SA SPORTS AWARDS
+	Scene: SA SPORTS AWARDS
+
